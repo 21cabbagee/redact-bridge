@@ -8,6 +8,7 @@ import { PricingSection } from './components/PricingSection';
 import { Footer } from './components/Footer';
 import { AuditCertificateModal } from './components/AuditCertificateModal';
 import { CABModal } from './components/CABModal';
+import OutcomeChart from './components/OutcomeChart';
 
 function App() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -41,6 +42,9 @@ function App() {
           onScrollToStudio={handleScrollToStudio}
           onOpenCAB={() => setIsCABModalOpen(true)}
         />
+
+        {/* Julien Bek $1:$6 Economic Engine / Larry Ellison SLA Proof */}
+        <OutcomeChart onCtaClick={() => setIsCABModalOpen(true)} />
 
         {/* Live Scrubbing Studio */}
         <RedactorStudio 
